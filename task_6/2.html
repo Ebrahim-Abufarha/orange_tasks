@@ -4,8 +4,265 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+
+    <style>
+        body{
+            background-color: beige;
+        }
+.top{
+width: 100%;
+height: 590px; 
+display: grid;
+grid-template-columns:50% 50%;
+grid-template-rows:repeat(1,1fr) ;
+padding: 0;
+margin: 0;
+
+
+}
+.topLeft{
+    /* width: 50%; */
+    background-image:
+    linear-gradient(to right ,rgba(0, 0, 0, 0.974) 20% ,rgba(0, 0, 0, 0)),
+       url( offer.png)  ;
+       background-repeat: no-repeat;
+       background-position-x: right; 
+       background-position-y: bottom;
+
+    height: 590px;
+    padding-left: 50px;
+padding-top: 20px;
+grid-column: 1 / 2;
+grid-row: 1;
+    /* grid-area: l; */
+}
+.topLeft h1{
+width: 300px;
+font-size: 60px;
+padding-top: 10px;
+color: orange;
+}
+
+
+.topRight{
+    /* width: 50%; */
+        /* grid-area: r; */
+color: white;
+    background-color: yellow;
+    grid-column: 2 / 4;
+grid-row: 1;
+display: grid;
+grid-template-columns: (2,1fr);
+grid-template-rows:  (2,1fr) ;
+
+}
+.a{
+    background-image: url(orange\ extra\ slide\ image_0.png);
+    background-position: 50%;
+    background-size: 400px;
+
+grid-column: 1;
+grid-row: 1;
+}
+
+.b{
+background-color: rgb(24, 196, 196);
+grid-column: 2;
+grid-row: 1;
+padding: 20px;
+display: grid;
+
+}
+
+.c{
+
+grid-column: 2;
+grid-row: 2;
+background-image: url(77325-Smart\ Life\ -\ Prints-031.webp);
+background-position: 50%;
+background-size: 650px;
+
+}
+
+.d{
+background-color: rgb(11, 171, 11);
+
+grid-column: 1;
+grid-row: 2;
+padding: 20px;
+display: grid;
+
+
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.button{
+    width: 100%;
+    height: 70px;
+margin-top: 30px;
+display: grid;
+background-color: rgba(255, 255, 255, 0.517);
+grid-template-areas: 
+
+'ss dd ff gg hh '
+
+;
+}
+
+.button div {
+    width: 290px;
+    height: 80px;
+    display: grid;
+
+    grid-template-rows: (1,1fr);
+    grid-template-columns: (2,1fr);
+    background-color: white;
+
+}
+.one{
+display: grid;
+grid-template-areas: 
+'f g'
+;
+grid-area: ss;
+}
+.two{
+grid-area: dd;
+grid-template-areas: 
+'f g'
+;
+border-bottom: 3px solid green;
+}
+.three{
+
+grid-area: ff;
+grid-template-areas: 
+'f g'
+;
+border-bottom: 3px solid blue;
+}
+.four{
+grid-area: gg;
+grid-template-areas: 
+'f g'
+;
+border-bottom: 3px solid purple;
+
+}
+.five{
+grid-area: hh;
+grid-template-areas: 
+'f g'
+;
+border-bottom: 3px solid pink;
+
+}
+
+  i{
+    padding-top: 10px;
+    font-size: 50px;
+ } 
+ .button div p{
+    font-size: 22px;
+ }
+
+    </style>
 </head>
 <body>
-    <h1>hellow word</h1>
+<div class="top">
+
+
+<div class="topLeft">
+<p style="width: 300px; padding-top: 10px;color: orange;">Offers & Services</p>
+<h1>Offers and Services</h1>
+<h3 style="width: 300px; color: white;">Stay connected to people in your life</h3> 
+<h4 style="width: 300px; color: white;">Best 4G+ and unlimited Internet bundles and features with Orange Mobile Links</h4>
+
+</div>
+
+
+<div class="topRight">
+<div  class="a">
+
+</div>
+
+<div class="b">
+
+    <div>
+      <h2>Orange Extra</h2>
+<p>Enjoy the experience of lifestylr & leisure with your Orange internet subscription</p>
+  
+    </div>
+<div>
+
+    <a style="position: relative; top: 60px; color: white; text-decoration: none;" href="#">Explore More</a>
+</div>
+
+</div>
+
+<div class="c">
+
+
+</div>
+
+<div class="d">
+    <div>
+        <h2>Smart Life</h2>
+  <p>Wide selection of smart life devices to make your life easier from Orange</p>
+    
+      </div>
+  <div>
+  
+      <a style="position: relative; top: 60px; color: white; text-decoration: none;" href="#">Explore More</a>
+  </div>
+  
+
+</div>
+
+
+</div>
+
+
+
+
+
+</div>
+<div class="button">
+<div style="background-color: orange;" class="one">
+    
+     <i style="grid-area: f;" class="fa-solid fa-mobile-screen"> </i>
+      <p style="grid-area: g;">Mobiles Offer</p>
+    
+
+</div>
+<div class="two">
+    <i class="fa-solid fa-globe"></i>
+<p>internet Offer</p>
+
+</div>
+<div class="three">
+    <i class="fa-solid fa-stopwatch"></i>
+    <p>Devices</p>
+</div>
+<div class="four">
+    <i class="fa-solid fa-plane"></i>
+    <p>Internationa & Roaming</p>
+</div>
+<div class="five">
+    <i class="fa-solid fa-blender-phone"></i>
+    <p>Fixed Line</p>
+</div>
+
+
+</div>
+
+
+
+
+
 </body>
 </html>
