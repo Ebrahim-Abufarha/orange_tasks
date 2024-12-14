@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .all{
+        width: 100%;
+        height: 100vh;
+display: grid;
+grid-template-columns: repeat(3,33.33%);
+grid-template-rows: repeat(7,1fr);
+gap: 7px;
+grid-template-areas: 
+"aa aa aa"
+"bb bb cc"
+"bb bb cc"
+"bb bb cc"
+"bb bb cc"
+"dd dd dd"
+"dd dd dd"
+
+
+
+;
+    }
+ 
+.a{
+background-color: black;
+grid-area: aa;
+}
+.b{
+background-color: orange;
+grid-area: bb;
+
+}
+.c{
+background-color: green;
+grid-area: cc;
+}
+.d{
+
+background-color: blue;
+grid-area: dd;
+}
+
+</style>
+
+
+</head>
+<body>
+
+    <div class="all">
+
+    <div class="a"></div>
+    <div class="b"></div>
+    <div class="c"></div>
+<div class="d"></div>
+
+    </div>
+
+
+
+
+</body>
+</html>

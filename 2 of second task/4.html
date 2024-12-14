@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    fieldset{
+        background-color: rgb(202, 202, 122);
+        border: solid;
+        /* padding: 10px; */
+        margin: 5px;
+display: flex;
+justify-content: start;
+align-content: start;
+flex-direction: column;
+width: 60%;
+flex-wrap: wrap;
+position: relative;left: 400px;top: 150px;
+    }
+form{
+    
+
+  /* background-color: black; */
+  display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+width: 50%;
+
+}
+p{
+    display: flex;
+  justify-content: end;
+
+}
+input{
+margin: 0px 20px;}
+
+</style>
+
+
+</head>
+<body>
+    <h1>Registration Form</h1>
+<form  action="">
+    <fieldset>
+<legend>Personal details</legend>
+<div> 
+   
+<p> 
+<label for="">First name</label>
+<input  style="width: 200px;" type="text">
+</p><br>
+    <p><label for="">Password</label>
+    <input  style="width: 200px;" type="password">
+    </p><br>
+    <p> 
+        <label for="">Email address</label>
+        <input  style="width: 200px;" type="email">
+      </p>  <br>
+      <p> 
+<label for="">Gender :</label>  
+<input type="radio" value="Male">
+<label for="Male">Male</label>
+<input type="radio" value="female">
+<label for="female">female</label>
+</p>    
+
+</div></fieldset>
+</form>
+<form action="">
+<fieldset style="width: 60%;"> 
+    <legend>City</legend>
+
+<div style="padding-left: 20%;">
+<br>
+ 
+<label style="padding: 5px 20px;" for="">City</label>
+<select name="" id="">
+<option value="">Amman</option>
+<option value="">Salt</option>
+<option value="">Aqaba</option>
+</select>
+</div></fieldset>
+ </form>
+<input style="width: 100px; position: relative;left: 45%;top: 180px;" type="submit">
+
+
+
+</body>
+</html>

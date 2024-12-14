@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.all{
+    width: 100%;
+    height: 300px;
+display: grid;
+gap: 10px;
+/* grid-template-columns: repeat(3,50px);
+grid-auto-rows: repeat(3,50px); */
+
+grid-template-areas: 
+"a b c"
+"d e f"
+"g h 0"
+;
+
+
+}
+.all img{
+    height: 230px;
+    width: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <div class="all">
+<img style="grid-area: a;" src="08a663fa3be4863649e6fa1a008a1dfe.png" alt="">
+<img style="grid-area: b;" src="2.jpg" alt="">
+<img style="grid-area: c;" src="3.jpg" alt="">
+<img style="grid-area: d;" src="4.jpg" alt="">
+<img style="grid-area: e;" src="5.jpg" alt="">
+<img style="grid-area: f;" src="6.jpg" alt="">
+<img style="grid-area: g;" src="7.jpg" alt="">
+<img style="grid-area: h;" src="2.jpg" alt="">
+
+    </div>
+</body>
+</html>
