@@ -1,0 +1,82 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .agents-section {
+    text-align: center;
+    margin: 50px 20px;
+  }
+  
+  .agents-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .agents-section p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 30px;
+  }
+  
+  .agents-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .agent-card {
+    background-color: #fff;
+    width: 250px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .agent-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .agent-card h3 {
+    font-size: 1.2rem;
+    color: #444;
+  }
+  
+  .agent-role {
+    font-size: 0.9rem;
+    margin: 10px 0;
+    color: #222;
+  }
+  
+  .agent-description {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .view-profile {
+    text-decoration: none;
+    color: #0056b3;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+  
+  .view-profile:hover {
+    color: #003580;
+  }
+  
