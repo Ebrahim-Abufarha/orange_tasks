@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #333;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .main-heading {
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .card-header {
+            background-color: #333;
+            color: white;
+            font-weight: bold;
+        }
+
+        .sidebar {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            height: 100%;
+        }
+
+        .sidebar p {
+            margin: 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+   
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-white" href="#"><em>My Website</em></a>
+            <div class="navbar-nav">
+                <a class="nav-link text-white" href="#">Link 1</a>
+                <a class="nav-link text-white" href="#">Link 2</a>
+                <a class="nav-link text-white" href="#">Link 3</a>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="container mt-4">
+        <div class="row">
+          
+            <div class="col-lg-9 col-md-12">
+                
+                <h1 class="main-heading">This is the main heading</h1>
+                <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.</p>
+                <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.</p>
+
+              
+                <div class="row col-12">
+                    <div  class="col-md-6 col-lg-4 mb-3">
+                        <div style="height: 170px;" class="card">
+                            <div class="card-header text-center">Card One</div>
+                            <div class="card-body">
+                                Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce spinach avocado.
+                            </div>
+                        </div>
+                    </div>
+                    <div  class="col-md-6 col-lg-4 mb-3">
+                        <div style="height: 170px;" class="card">
+                            <div class="card-header text-center">Card Two</div>
+                            <div class="card-body">
+                                Daikon napa cabbage asparagus winter purslane kale. Celery potato scallion horseradish spinach carrot soko.
+                            </div>
+                        </div>
+                    </div>
+                    <div  class="col-md-6 col-lg-4 mb-3">
+                        <div style="height: 170px;" class="card">
+                            <div class="card-header text-center">Card Three</div>
+                            <div class="card-body">
+                                Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard pumpkin onion chickpea gram.
+                            </div>
+                        </div>
+                    </div>
+                    <div  class="col-md-6 col-lg-4 mb-3">
+                        <div style="height: 170px;" class="card">
+                            <div class="card-header text-center">Card Four</div>
+                            <div class="card-body">
+                                Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard chickpea corn pea.
+                            </div>
+                        </div>
+                    </div>
+                    <div  class="col-md-6 col-lg-4 mb-3">
+                        <div style="height: 170px;" class="card">
+                            <div class="card-header text-center">Card Five</div>
+                            <div class="card-body">
+                                Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery bunya nuts black-eyed pea lentil turnip greens.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 d-none d-lg-block  ">
+                <div class="sidebar">
+                    <p>Have you discovered all of the other excellent content on this website?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

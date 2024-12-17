@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR" crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.bundle.min.js" integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/" crossorigin="anonymous"></script>
+
+
+
+    <style>
+ #top{
+    width: 100%;
+    height: 200px;
+    background-color: rgb(200, 200, 179);}
+    /*display: grid;
+    grid-template-areas: 
+    'a b b c d e'
+    'f f g h i j'
+    ;
+    margin: 0;
+    padding: 5px;
+    gap: 10px;
+} */
+.a{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+font-size: 20px;
+
+}
+.buttom{
+    width: 100%;
+    height:510px ;
+    display: flex;
+}
+.left{
+    width: 70%;
+}
+.left img{
+    width: 100%;
+    height: 510px;
+}
+.right{
+color: white;
+width: 30%;
+display: flex;
+flex-wrap: wrap;
+text-align: center;
+}
+.b{
+    background-color: rgba(0, 0, 0, 0.754);
+    width: 200px;
+    margin: 10px;
+    margin-top: 40px;
+    height: 100px;
+    padding-top: 5px;
+}
+.b span{
+    font-size: small;
+}
+    </style>
+</head>
+<body>
+    <div id="top" class="col-lg-12 row col-sm-6 ">
+
+        <div style="background-color: aqua;" class="a col-lg-2 col-sm-1"><i class="fa-solid fa-table-columns"></i> <p>Dashboard</p></div>
+        <div style="background-color: green;" class="a col-lg-4 col-sm-2"><i class="fa-solid fa-chart-column"></i> <p>Charts</p></div>
+        <div style="background-color: orange;" class="a col-lg-2 col-sm-1"><i class="fa-solid fa-table-columns"></i> <p>Widgets</p></div>
+        <div style="background-color: red;" class="a col-lg-2 col-sm-1"><i class="fa-solid fa-border-none"></i> <p>Tables</p></div>
+        <div style="background-color: blue;" class="a col-lg-2 col-sm-1"><i class="fa-solid fa-up-down-left-right"></i> <p>Full Width</p></div>
+        <div style="background-color: red;" class="a col-lg-4 col-sm-2"><i class="fa-regular fa-rectangle-list"></i> <p>Forms</p></div>
+        <div style="background-color: blue;" class="a col-lg-2 col-sm-1"><i class="fa-regular fa-circle-dot"></i> <p>Buttons</p></div>
+        <div style="background-color: aqua;" class="a col-lg-2 col-sm-1"><i class="fa-solid fa-pen"></i> <p>Elements</p></div>
+        <div style="background-color: green;" class="a col-lg-2 col-sm-1"><i class="fa-solid fa-calendar-check"></i> <p>Calnedar</p></div>
+        <div style="background-color: orange;" class="a col-lg-2 col-sm-1"><i class="fa-solid fa-triangle-exclamation"></i> <p>Errors</p></div>
+    </div>
+    <div class="buttom">
+<div class="left">
+<img src="chart.svg" alt="">
+
+</div>
+<div class="right">
+<div class="b"><i class="fa-solid fa-user"></i><p>2540</p><span>Total Users</span></div>
+<div class="b"><i class="fa-solid fa-plus"></i> <p>120</p><span>New Users</span></div>
+<div class="b"><i class="fa-solid fa-cart-shopping"></i> <p>656</p><span>Total Shop</span></div>
+<div class="b"><i class="fa-solid fa-tag"></i><p>9540</p><span>Total Orders</span></div>
+<div class="b"><i class="fa-solid fa-table"></i><p>100</p><span>Pending Orders</span></div>
+<div class="b"><i class="fa-solid fa-globe"></i><p>8540</p><span>Online Orders</span></div>
+
+
+</div>
+
+
+
+    </div>
+</body>
+</html>
