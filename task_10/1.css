@@ -1,0 +1,169 @@
+.hed{
+width: 100%;
+background-color: rgb(240, 240, 229);
+/* padding: 5px; */
+
+}
+
+
+.all{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+.leto{
+    display: flex; 
+align-items: center;
+justify-content: space-between;
+width: 30%;
+
+
+}
+nav a{
+    text-decoration: none;
+    color: black;
+   
+
+}
+nav a div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.rito{
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    width: 24%;
+    
+}
+.nav2{
+    margin-right: 7%;
+}
+
+.do{
+width: 100%;
+display: flex;
+height: 50px;
+padding-top: 2%;
+
+
+}
+
+.doleft{
+    margin-left: 8%;
+width: 15%;
+height: 430px;
+display: flex;
+flex-direction: column;
+border: solid 1px;
+
+}
+.doleft a{
+padding-left: 15%;
+padding-top: 5%;
+text-decoration: none;
+    
+}
+.doleft a:hover{
+color: rgb(72, 174, 72);
+
+}
+.doleft p{
+
+    padding-left: 15%;
+    background-color: rgb(72, 174, 72);
+    height: 30px;
+    margin: 0;
+    padding-top: 10px;
+    
+}
+.doright{
+    width: 68%;
+display: flex;
+justify-content: space-between;
+padding-left: 1.6%;
+
+
+}
+.nanaall{
+    display: flex;
+    justify-content: space-between;
+    
+
+
+}
+.nanaall a{
+    color: black;
+}
+.nanaall a:hover{
+    color: rgb(72, 174, 72);
+}
+
+.nanalolo{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+
+}
+.nanalolo a{
+    text-decoration: none;
+}
+
+.nanaroro{
+width:15%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+.nav2{
+    
+margin-left: 25%;
+}
+.bac{
+    margin-left: 25%;
+    width: 69%;
+    height: 400px;
+background-image: url(bac.jpg);
+display: flex;
+flex-direction: column;
+}
+.bac div{
+    width: 18%;
+display: flex;
+flex-direction: column;
+padding-top: 50px;
+padding-left: 100px;
+
+
+
+}
+.butt{
+    margin: 2%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-left: 8%;
+width: 86%;
+
+}
+
+.fff{
+    width: 180px;
+    height: 150px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    display: flex;
+    align-items: end;
+
+    
+
+}
+.fff p{
+    background-color: white;
+}
