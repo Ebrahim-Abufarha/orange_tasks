@@ -64,7 +64,7 @@ border: solid 1px;
 padding-left: 15%;
 padding-top: 5%;
 text-decoration: none;
-color: bl;
+color: black;
     
 }
 .doleft a:hover{
@@ -168,9 +168,14 @@ width: 86%;
 .fff p{
     background-color: white;
 }
+.koko{
+    display: flex;
+}
+.kiki{
+    color: white; width: 150px;height: 50px; background-color: rgb(72, 174, 72);margin-top: 20px;
+}
 
-
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     .all, .rito, .leto, .doright, .nanaall, .butt {
         flex-direction: column;
         align-items: center;
@@ -209,45 +214,77 @@ width: 86%;
         width: 100% !important;
         margin: 5px 0;
     }
+} */
+
+
+@media (max-width: 900px) {
+    .navbar{
+display: none;    }
+.nanaall{
+    justify-content: left;
 }
+.nav2{
+    
+    margin-left: 0;
 
-
-@media (max-width: 992px) {
-    .all, .rito, .nanalolo {
-        flex-wrap: wrap; 
     }
 
-    .bac div {
-        padding-left: 20px;
-        padding-top: 30px;
+    .doleft{
+        margin-left: 0;
+    width: 20%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px;
+    
     }
+    .doleft a{
+        padding-left: 0;
+        padding-top: 15px;
+        text-decoration: none;
+        color: black;
+            
+        }
+        .doleft p{
+            height: 40px;
+        }
+        .nanalolo a{
+            padding: 5px;
+        }
+        .nanaroro{
+            width: 40%;
+            margin-left: 60px;
+        }
+        .sel{
+            width: 100px;
+        }
+        .doright{
+            flex-direction: column;
 
-    .doright {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+        }
+        .oo{
+            margin-top: 30px;
 
-    .doleft {
-        height: auto;
-    }
-}
+        }
+        .bac{
+            margin-top: 80px;
+            background-size: 100% 80%;
+            
+            background-repeat: no-repeat;
+        }
+        .bac div{
+            padding-top: 0;
+            padding-left: 50px;
 
-
-@media (max-width: 1200px) {
-    .butt {
-        flex-wrap: wrap;
-    }
-
-    .butt div {
-        margin: 5px;
-    }
-
-    .nanalolo, .nanaroro {
-        justify-content: space-around;
-    }
-
-    .bac {
-        background-position: center;
-    }
+        }
+       .kiki{
+margin-top: -2px;    
+width: 100px;
+height: 40px;   
+ }
+ .butt{
+margin-top:-50px ;
+flex-wrap: wrap;   
+gap: 20px;
+ }
 }
