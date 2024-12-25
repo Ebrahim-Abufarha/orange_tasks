@@ -1,6 +1,9 @@
 // 1- Write a program that prints numbers from 1 to 10 using a for loop.
+
 for (i = 1; i <= 10; i++) {
+
     console.log(i);
+
 }
 
 // 2-Write a program that prints the even numbers from 1 to 10 using a for loop.
@@ -16,8 +19,8 @@ let i =1;
 while(i<=10){
     if(i %2 !==0)
     {
-        console.log(i)
-    }
+      console.log(i)
+    } 
 
 i++;
 
@@ -42,8 +45,12 @@ while (m <= 100) {
   sum += m; 
   m++;     
 }
-console.log(`The sum of numbers from 1 to 100 is: ${sum}`); // طباعة النتيجة
+console.log(`The sum of numbers from 1 to 100 is: ${sum}`);
+
+
+
 // 6- Write a program that calculates the factorial of a number entered by the user using a for loop.
+
 const numberr = parseInt(prompt("Enter a number to print its multiplication table:"));
 if (numberr < 0) {
     console.log("Factorial is not defined for negative numbers.");
@@ -84,8 +91,8 @@ if (limit < 0) {
 // using a while loop.
 
 let t = [5 , 10 , 15 , 20];
-let w = t.length -1;
-while(i>0){
+let w = t.length ;
+while(w>=0){
         console.log(t[w])
 
     w--;
