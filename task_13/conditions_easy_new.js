@@ -63,7 +63,7 @@ if(x>10 || x<0){
 // 6- Write a programto declare a number. 
 //If the number is between 5 and 10 (inclusive) or between 20 and 25 (inclusive), print "The number is valid". 
 //Otherwise, print "The number is not valid".
-if(x>=20 && x<=25 ||x>=5 && x<=10){
+if(x>=20 && x<=25 ||x>=5 && x<=10 ){
 console.log("inclusive")
 
 }else{console.log("The number is valid")};
