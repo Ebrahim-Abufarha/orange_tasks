@@ -1,6 +1,6 @@
 // 1-Write a function to find the largest element in an array.
 function findLargest(arr) {
-    return Math.max(...arr);
+    return Math.max(arr);
   }
   
   console.log(findLargest([5, 12, 3, 8, 20]));
@@ -31,7 +31,7 @@ function medianArray(arr) {
     arr.sort((a, b) => a - b);
     const mid = Math.floor(arr.length / 2);
   
-    if (arr.length % 2 !== 0) {
+    if (arr.length % 2 != 0) {
       return arr[mid]; 
     } else {
       return (arr[mid - 1] + arr[mid]) / 2; 

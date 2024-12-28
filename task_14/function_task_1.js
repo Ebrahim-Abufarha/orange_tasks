@@ -20,9 +20,6 @@ let partnerName= prompt("please inter partnerName ");
 let numberOfChildren= prompt("please inter numberOfChildren ");
 
 
-
-
-
 let fortune= tellFortune(jobTitle, geographicLocation, partnerName, numberOfChildren);
 
 /*
@@ -60,7 +57,7 @@ Ex: calculateSupply(30, 3);
 */
 
 function calculateSupply(agee,amount){
-  return`"You will need ${agee * 365 * (100-agee)} to last you until the ripe old age of 100`
+  return`You will need ${agee * 365 * (100-agee)} to last you until the ripe old age of 100`
 
 
 }
@@ -165,11 +162,11 @@ Ex: multiply(5,4)
 => 20
 */
 function multiply(x,y){
-  return x*y
+  return x*y;
 
 
 }
-console.log(multiply(3,4))
+console.log(multiply(3,4));
 
 /*
 9
@@ -218,7 +215,7 @@ Ex: sameLength("tree","car")
 */
 
 function sameLength(x,y){
-  if(length.x==length.y){
+  if(x.length===y.length){
     return "true"
   }else {return "false"}
 
@@ -278,10 +275,9 @@ Ex: smallerNubmer(5,3,3)
 
 */
 function smallerNumber(num1, num2, num3) {
-  // مقارنة الأرقام الثلاثة لإيجاد الأصغر
-  if (num1 <= num2 && num1 <= num3) {
+  if (num1 < num2 && num1 < num3) {
     return num1;
-  } else if (num2 <= num1 && num2 <= num3) {
+  } else if (num2 < num1 && num2 < num3) {
     return num2;
   } else {
     return num3;
@@ -364,12 +360,12 @@ function longerString(num1,num2,num3,num4,num5){
   }else {return `num5 is ${num5}`}
 
 }
-num1=prompt("inter num1")
-num2=prompt("inter num2")
-num3=prompt("inter num3")
-num4=prompt("inter num4")
-num5=prompt("inter num5")
-console.log(longerString(num1,num2,num3,num4,num5))
+num1=prompt("inter num1");
+num2=prompt("inter num2");
+num3=prompt("inter num3");
+num4=prompt("inter num4");
+num5=prompt("inter num5");
+console.log(longerString(num1,num2,num3,num4,num5));
 /*
 15
 Write a function called isEven
@@ -434,11 +430,8 @@ Ex: positive(-5)
 
 */
 function positive(x){
-  if(x>0){
-    return x;
 
-  }else{ return x * -1} 
-
+  return Math.abs(x)
 }
 let x =prompt("inter the number")
 x=Number(x);
@@ -479,17 +472,16 @@ Ex: average(5,7,9,3,5)
 => 5.8
 
 */
-function average(...numbers) {
-  let sum = numbers.reduce((acc, num) => acc + num, 0);
+function average(x1,x2,x3,x4,x5) {
+  let sum =x1+x2+x3+x4+x5;
 
-  let avg = sum / numbers.length;
+  let avg = sum / 5;
 
   return avg;
 }
 
-console.log(average(10, 20, 30, 40, 50)); 
-console.log(average(5, 15, 25, 37, 45, 55));
-console.log(average(1, 2, 3)); 
+console.log(average(3,4,5,1,9)); 
+
 
 
 /*
@@ -595,21 +587,12 @@ Ex: counter()
 
 */
 function counter() {
-  let count = 0;
-
-  return function() {
-    return count++;
-  };
-}
-
-let myCounter = counter(); 
-
-console.log(myCounter());  
-console.log(myCounter()); 
-console.log(myCounter());
-console.log(myCounter()); 
-
-
+  x++;
+  console.log(x);
+  }
+  var x = 0 ;
+  counter()
+  counter()
 /*
 24
 Write a function called resetCounter
@@ -642,28 +625,23 @@ Ex: counter()
 => 1
 */
 function counter() {
-  let count = 0; 
-
-  function increment() {
-    return count++;
+  x++;
+  console.log(x);
   }
+  function resetCounter(){
+console.log(`${x} and the counter reset now`)
+x=0;
 
-  function reset() {
-    let previousCount = count;
-    count = 0;  
-    return `${previousCount} - The counter has been reset`; 
   }
-
-  return {
-    increment,
-    reset
-  };
-}
-
-let myCounter = counter();
-
-console.log(myCounter.increment());
-console.log(myCounter.increment()); 
-console.log(myCounter.increment());  
-console.log(myCounter.reset());   
-console.log(myCounter.increment()); 
+  var x = 0 ;
+  counter()
+  counter()
+  counter()
+  resetCounter()
+  counter()
+  counter()
+  counter()
+  counter()
+  counter()
+  counter()
+  resetCounter()
