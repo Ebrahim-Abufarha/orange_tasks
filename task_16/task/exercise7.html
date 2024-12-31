@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{display: flex;
+        flex-direction: column;}
+        .ii{
+            width: 500px;
+        }
+        .jj{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <select class="jj" name="" id="ss">
+        <option selected value="jo">jordan</option>
+        <option value="pa">palestine</option>
+        <option value="ksa">ksa</option>
+       
+
+    </select>
+    <img id="im" class="ii" src="jo.png" alt="">
+    <script>
+        let ss=document.getElementById("ss")
+        let im=document.getElementById("im");
+        function cha(){
+            if(ss.value=="pa"){
+        im.src="pa.jpg";
+            }else if(ss.value=="ksa"){
+        im.src="ksa.jpg";
+            }else if(ss.value=="jo"){
+        im.src="jo.png";
+            }
+        }
+        ss.addEventListener("change", cha);
+
+    </script>
+</body>
+</html>

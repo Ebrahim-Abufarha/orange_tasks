@@ -1,0 +1,79 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <title>Exercise #5: Input check for minimum number of characters</title>
+     <style>
+         * {
+             font-family: Arial, sans-serif;
+         }
+ 
+         .err {
+             color: red;
+             font-size: 0.7em;
+         }
+     </style>
+ </head>
+ <body>
+ 
+ <form name="pw">
+     <table>
+         <tr>
+             <td>Password (min 6 characters):</td>
+             <td><input type="password" name="password1" id="password1" size="10" placeholder="Password"></td>
+             <td>
+                 <div id="pw1_check" class="err"></div>
+             </td>
+         </tr>
+         <tr>
+             <td>Repeat password:</td>
+             <td><input type="password" name="password2" id="password2" size="10" placeholder="Password"></td>
+             <td>
+                 <div id="pw2_check" class="err"></div>
+             </td>
+         </tr>
+     </table>
+ 
+     <input type="submit" value="Submit" id="submitBtn" onclick="hello()">
+ </form>
+ 
+ <script>
+     const password1 = document.getElementById("password1");
+     const password2 = document.getElementById("password2");
+     const pw1Check = document.getElementById("pw1_check");
+     const pw2Check = document.getElementById("pw2_check");
+     const form = document.forms["pw"];
+ 
+     // وظيفة للتحقق من كلمة المرور الأولى
+     function validatePassword1() {
+        if (password1.value.length < 6) {
+             pw1Check.textContent = "Enter more than 6 characters";
+         } else {
+             pw1Check.textContent = ""; // إزالة رسالة الخطأ
+         }
+     }
+ 
+     // وظيفة للتحقق من كلمة المرور الثانية
+     function validatePassword2() {
+       if (password2.value !== password1.value) {
+             pw2Check.textContent = "Not OK";
+         } else {
+             pw2Check.textContent = ""; // إزالة رسالة الخطأ
+         }
+     }
+ 
+   
+     function hello () {
+         validatePassword1();
+         validatePassword2();
+ 
+         if (pw1Check.textContent || pw2Check.textContent) {
+             event.preventDefault();
+         }
+     };
+ </script>
+ 
+ </body>
+ </html>
+ 

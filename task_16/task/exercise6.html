@@ -1,0 +1,38 @@
+
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #7: Simple playlist</title>
+    <style>
+       
+        
+    </style>
+</head>
+<body>
+<p>This is your playlist. When you enter a song and hit "Add Song," a list item should be created with a delete button as shown in the example below.</p>
+
+<form>
+    <input type="text" id="songTextInput" size="40" placeholder="Song name">
+    <input onclick="newsong()" type="button" id="addButton" value="Add Song">
+</form>
+
+<ul id="playlist">
+</ul>
+
+<script>
+   
+   function newsong(){
+let song =document.getElementById("songTextInput").value;
+const newR = document.createElement("li");
+const newG = document.createTextNode(song);
+newR.appendChild(newG);
+document.getElementById("playlist").appendChild(newR);
+   }
+
+
+</script>
+</body>
+</html>
