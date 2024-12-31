@@ -11,17 +11,19 @@
             background-color: red;
         }
     </style>
-    <script>
-var i =0;
-function changecolor(){
-
-const color=["black","orange","blue","white","green","darkblue","darkgreen"]
-document.getElementById("mydiv").style.backgroundColor = `${color[i]}`;
-i++;
-}
-    </script>
+   
 </head>
 <body>
 <div id="mydiv" onclick="changecolor()"></div>
+<script>
+    var i =0;
+    const ele=document.getElementById("mydiv");
+    function changecolor(){
+    
+    const color=["black","orange","blue","white","green","darkblue","darkgreen"]
+    ele.style.backgroundColor = `${color[i]}`;
+    i++;
+    }
+        </script>
 </body>
 </html>
