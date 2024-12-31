@@ -43,23 +43,20 @@
      const password2 = document.getElementById("password2");
      const pw1Check = document.getElementById("pw1_check");
      const pw2Check = document.getElementById("pw2_check");
-     const form = document.forms["pw"];
  
-     // وظيفة للتحقق من كلمة المرور الأولى
      function validatePassword1() {
         if (password1.value.length < 6) {
              pw1Check.textContent = "Enter more than 6 characters";
          } else {
-             pw1Check.textContent = ""; // إزالة رسالة الخطأ
+             pw1Check.textContent = "";
          }
      }
  
-     // وظيفة للتحقق من كلمة المرور الثانية
      function validatePassword2() {
        if (password2.value !== password1.value) {
              pw2Check.textContent = "Not OK";
          } else {
-             pw2Check.textContent = ""; // إزالة رسالة الخطأ
+             pw2Check.textContent = "";
          }
      }
  
