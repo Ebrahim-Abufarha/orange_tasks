@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <input id="c" type="number" placeholder="Celsius">
+        <input id="fh" type="number" placeholder="Fahrenheit">
+        <button onclick="calf()" >calculate</button>
+
+
+<script>
+
+function calf(){
+
+const c = document.getElementById("c");
+const fh = document.getElementById("fh");
+
+const valC = parseFloat(c.value);
+const valF=parseFloat(fh.value);
+
+if(isNaN (valC) && isNaN(valF)){
+    alert("please inter the degree")
+return ;
+}
+    const fahrenheit = (1.8 * valC) + 32;
+fh.value=fahrenheit.toFixed(3);
+
+const celsius =  (valF - 32) / 1.8;
+        c.value=celsius.toFixed(3);
+
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+
+<!-- function calf(){
+    const c = document.getElementById("c");
+    const fh = document.getElementById("fh");
+    
+    const valC = parseFloat(c.value);
+    if(isNaN (valC)){
+        alert("please inter Celsius")
+    
+    }else{
+        const fahrenheit = (1.8 * valC) + 32;
+    fh.value=fahrenheit.toFixed(3);
+    
+    }
+    
+    }
+    function calC(){
+        const c = document.getElementById("c");
+        const fh = document.getElementById("fh");
+    
+        const valF=parseFloat(fh.value);
+        if(isNaN (valF)){
+            alert("please inter Fahrenheit");
+    
+        }else{
+            const celsius =  (valF - 32) / 1.8;
+            c.value=celsius.toFixed(3);
+    
+        }
+    
+    
+    
+    } -->
+
+
+
+
+
+
+
+
+    
+
+    
