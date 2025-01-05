@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            display: flex;
+            justify-content: space-between;
+        }
+ .card1{
+width: 300px;
+        }
+    .card div img{width: 100%;}
+    .cart{
+        margin-top: 150px;
+    }
+
+    .cart div img{
+        width: 100px;
+    }
+    .cart div{
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .cart div button{
+        height: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .cart .cart-item1{
+display: none;
+    }
+    .cart .cart-item2{
+        display: none;
+
+    }
+    .cart .cart-item3{
+        display: none;
+
+    }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card1">
+            <img src="1.jpg" alt="">
+            <h2>pysecle</h2>
+            <h3>100jd</h3>
+            <button onclick="block1(),total()" >add to cart</button>
+        </div>
+
+        <div class="card1">
+            <img src="2.webp" alt="">
+            <h2>i phone</h2>
+            <h3>1500jd</h3>
+            <button onclick="block2(),total()" >add to cart</button>
+        </div>
+
+        <div class="card1">
+            <img src="3.jpg" alt="">
+            <h2>corolla</h2>
+            <h3>13000jd</h3>
+            <button onclick="block3(),total()" >add to cart</button>
+        </div>
+        
+    </div>
+
+
+<div id="cart" class="cart">
+
+    <div id="cart-item1" class="cart-item1">
+        <img src="1.jpg" alt="Phone">
+        <div class="quantity-control">
+            <button onclick="mi1(),total()" id="mi1">-</button>
+            <span id="nu1">0</span>
+            <button onclick="pl1(),total()" id="pl1">+</button>
+        </div>
+        <div id="pr1" class="price">0</div>
+        <button onclick="rem1(),total()" id="remove1" class="remove">&times;</button>
+    </div>
+
+    <div id="cart-item2" class="cart-item2">
+        <img src="2.webp" alt="Phone">
+        <div class="quantity-control">
+            <button onclick="mi2(),total()">-</button>
+            <span id="nu2">0</span>
+            <button onclick="pl2(),total()" id="pl2">+</button>
+        </div>
+        <div id="pr2" class="price">0</div>
+        <button onclick="rem2(),total()" id="remove2" class="remove">&times;</button>
+    </div>
+
+
+
+<div id="cart-item3" class="cart-item3">
+    <img src="3.jpg" alt="Phone">
+    <div class="quantity-control">
+        <button onclick="mi3(),total()" id="mi3">-</button>
+        <span id="nu3">0</span>
+        <button onclick="pl3(),total()" id="pl3">+</button>
+    </div>
+    <div id="pr3" class="price">0</div>
+    <button onclick="rem3(),total()" id="remove3" class="remove">&times;</button>
+</div>
+</div>
+<div class="total">
+    <h1>Total</h1>
+    <h2 id="toto"></h2>
+</div>
+
+
+
+
+    <script>
+function block1(){
+    let cartitem1 = document.getElementById("cart-item1");
+    let nu1=document.getElementById("nu1");
+
+nu1.textContent++;
+let number1 = parseInt(nu1.textContent); 
+
+nu1.textContent = number1;
+cartitem1.style.display="flex";
+let pr1 = document.getElementById("pr1");
+
+    pr1.textContent = (100 * number1)
+    sessionStorage.setItem("hed1","nu1.textContent");
+
+
+
+}
+function block2(){
+    let cartitem2 = document.getElementById("cart-item2");
+    let nu2=document.getElementById("nu2");
+
+nu2.textContent++;
+let number2 = parseInt(nu2.textContent); 
+
+nu2.textContent = number2;
+    cartitem2.style.display="flex";
+    let pr2 = document.getElementById("pr2");
+
+    pr2.textContent = (1500 * number2)
+    sessionStorage.setItem("hed2","nu2.textContent");
+
+
+}
+function block3(){
+    let cartitem3 = document.getElementById("cart-item3");
+    let nu3=document.getElementById("nu3");
+
+nu3.textContent++;
+let number3 = parseInt(nu3.textContent); 
+
+nu3.textContent = number3;
+    cartitem3.style.display="flex";
+    let pr3 = document.getElementById("pr3");
+
+    pr3.textContent = (13000 * number3)
+    sessionStorage.setItem("hed3","nu3.textContent");
+
+
+}
+
+
+
+
+
+function rem1(){
+    let cartitem1 = document.getElementById("cart-item1");
+
+    let reem1 = document.getElementById("remove1");
+    let nu1=document.getElementById("nu1");
+    nu1.textContent =0;
+
+
+    let pr1 = document.getElementById("pr1");
+let pr2 = document.getElementById("pr2");
+let pr3 = document.getElementById("pr3");
+
+   
+
+
+    cartitem1.style.display="none";
+    sessionStorage.setItem("hed1","0");
+
+
+}
+function rem2(){
+    let cartitem2 = document.getElementById("cart-item2");
+
+    let reem2 = document.getElementById("remove2");
+let nu2=document.getElementById("nu2");
+    nu2.textContent =0;
+cartitem2.style.display="none";
+sessionStorage.setItem("hed2","0");
+
+}
+function rem3(){
+    let cartitem3 = document.getElementById("cart-item3");
+
+    let reem3 = document.getElementById("remove3");
+let nu3=document.getElementById("nu3");
+    nu3.textContent =0;
+cartitem3.style.display="none";
+sessionStorage.setItem("hed3","0");
+
+}
+
+function mi2(){
+    let nu2=document.getElementById("nu2");
+    let number2 = parseInt(nu2.textContent); 
+    if(number2 > 0 ){
+
+    number2 = number2 - 1;
+    nu2.textContent = number2;
+
+    let pr2 = document.getElementById("pr2");
+
+    pr2.textContent = (1500 * number2)
+    sessionStorage.setItem("hed2",nu2.textContent);
+
+return;
+
+    }
+    
+}
+function pl2(){
+    let nu2=document.getElementById("nu2");
+    let number2 = parseInt(nu2.textContent); 
+
+    number2 = number2 + 1;
+    nu2.textContent = number2;
+    let pr2 = document.getElementById("pr2");
+
+    pr2.textContent = (1500 * number2)
+    sessionStorage.setItem("hed2",nu2.textContent);
+
+
+}
+function mi3(){
+    let nu3=document.getElementById("nu3");
+    let number3 = parseInt(nu3.textContent); 
+    if(number3 > 0 ){
+
+    number3 = number3 - 1;
+    nu3.textContent = number3;
+
+ let pr3 = document.getElementById("pr3");
+
+    pr3.textContent = (13000 * number3)
+    sessionStorage.setItem("hed3",nu3.textContent);
+
+return;
+    }
+   
+}
+function pl3(){
+    let nu3=document.getElementById("nu3");
+    let number3 = parseInt(nu3.textContent); 
+
+    number3 = number3 + 1;
+    nu3.textContent = number3;
+    let pr3 = document.getElementById("pr3");
+
+    pr3.textContent = (13000 * number3)
+    sessionStorage.setItem("hed3",nu3.textContent);
+
+}
+function mi1(){
+    let pr1 = document.getElementById("pr1");
+    let numprice1 = parseInt(pr1.textContent);
+    let nu1=document.getElementById("nu1");
+    let number1 = parseInt(nu1.textContent); 
+    if(number1 > 0 ){
+
+    number1 = number1 - 1;
+    nu1.textContent = number1;
+    let pr1 = document.getElementById("pr1");
+
+    pr1.textContent = (100 * number1)
+    sessionStorage.setItem("hed1",nu1.textContent);
+
+
+return;
+    }
+}
+function pl1(){
+    let pr1 = document.getElementById("pr1");
+
+    let nu1=document.getElementById("nu1");
+    let number1 = parseInt(nu1.textContent); 
+
+    number1 = number1 + 1;
+
+    nu1.textContent = number1;
+
+    pr1.textContent = (100 * number1)
+    sessionStorage.setItem("hed1",nu1.textContent);
+
+}
+function total(){
+    let sumt=0;
+    let total = document.getElementById("toto");
+    
+let pr1 = document.getElementById("nu1");
+let pr2 = document.getElementById("nu2");
+let pr3 = document.getElementById("nu3");
+
+    let number5 = parseInt(pr1.textContent)*100;
+    let number6 = parseInt(pr2.textContent)*1500 ;
+    let number7 = parseInt(pr3.textContent)*13000 ;
+    
+
+
+ sumt = number5+number6+number7 ;
+
+total.textContent=sumt;
+}
+
+window.onload = function() {
+
+    sumhead1=    sessionStorage.getItem("hed1");
+    sumhead2=    sessionStorage.getItem("hed2");
+    sumhead3=    sessionStorage.getItem("hed3");
+
+    if(sumhead1 > 0){
+        let cartitem1 = document.getElementById("cart-item1");
+        cartitem1.style.display="flex";
+                total();
+
+             let nu1=document.getElementById("nu1").textContent=sumhead1;
+             let pr1 = document.getElementById("pr1").textContent=sumhead1*100;
+
+
+    }
+    if(sumhead2 > 0){
+        let cartitem2 = document.getElementById("cart-item2");
+        cartitem2.style.display="flex";    
+            total();
+        let nu2=document.getElementById("nu2").textContent=sumhead2;
+        let pr2 = document.getElementById("pr2").textContent=sumhead2*1500;
+
+    }
+    if(sumhead3 > 0){
+        let cartitem3 = document.getElementById("cart-item3");
+        cartitem3.style.display="flex";  
+              total();
+        let nu3=document.getElementById("nu3").textContent=sumhead3;
+             let pr3 = document.getElementById("pr3").textContent=sumhead3*13000;
+    }
+
+    total();
+
+
+
+}
+
+
+    </script>
+</body>
+</html>
+
+

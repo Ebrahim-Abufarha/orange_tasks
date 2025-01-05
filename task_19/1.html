@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .all {
+            width: 300px;
+            height: 500px;
+            background-color: aqua;
+            display: grid;
+            gap: 10px;
+            padding-right: 10px;
+            padding-left: 10px;
+            grid-template-areas: 
+                "z z z z"
+                "a b c d"
+                "e f g h"
+                "i j k l"
+                "m n o p";
+        }
+        .all div {
+            text-align: center;
+            color: black;
+            font-size: 50px;
+            height: 70px;
+            padding-top: 10px;
+            box-shadow: 0px 3px 0px 0px gray;
+            cursor: pointer;
+        }
+        #result {
+            background-color: white;
+            grid-area: z;
+            margin-top: 15px;
+            font-size: 40px;
+            height: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div id="result"></div>
+        
+        <div class="button" data-value="1">1</div>
+        <div class="button" data-value="2">2</div>
+        <div class="button" data-value="3">3</div>
+        <div class="button" data-value="+">+</div>
+        
+        <div class="button" data-value="4">4</div>
+        <div class="button" data-value="5">5</div>
+        <div class="button" data-value="6">6</div>
+        <div class="button" data-value="-">-</div>
+        
+        <div class="button" data-value="7">7</div>
+        <div class="button" data-value="8">8</div>
+        <div class="button" data-value="9">9</div>
+        <div class="button" data-value="*">*</div>
+        
+        <div class="button" data-value="c">C</div>
+        <div class="button" data-value="0">0</div>
+        <div class="button" data-value="=">=</div>
+        <div class="button" data-value="/">/</div>
+    </div>
+
+    <script>
+        let result = document.getElementById("result");
+        let cal = "";  
+
+        document.querySelectorAll(".button").forEach(button => {
+            button.addEventListener("click", function() {
+                let value = button.getAttribute("data-value");
+
+                if (value === "=") {
+                    try {
+                        result.textContent = eval(cal);
+                        cal = result.textContent;
+                    } catch (e) {
+                        result.textContent = "Error";
+                    }
+                } else if (value === "c") {
+                    cal = "";
+                    result.textContent = ""; 
+                } else {
+                    cal += value;
+                    result.textContent = cal;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+<!-- 
+<script>
+    let result = document.getElementById("result");
+    let cal = "";  
+
+    // إضافة أحداث النقر لكل زر
+    document.querySelectorAll(".button").forEach(button => {
+        button.addEventListener("click", function() {
+            let value = button.getAttribute("data-value");
+
+            if (value === "=") {
+                try {
+                    result.textContent = eval(cal); // حساب النتيجة باستخدام eval
+                    cal = result.textContent;  // تحديث المدخلات
+                } catch (e) {
+                    result.textContent = "Error";  // إذا حدث خطأ في الحساب
+                }
+            } else if (value === "c") {
+                cal = ""; // مسح المدخلات
+                result.textContent = "0"; // إعادة النتيجة إلى 0
+            } else {
+                cal += value;  // إضافة الرقم أو العملية إلى المدخلات
+                result.textContent = cal; // تحديث العرض
+            }
+        });
+    });
+</script> -->
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+.all{
+width: 300px;
+height: 500px;
+    background-color: aqua;
+    display: grid;
+    gap: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+grid-template-areas: 
+"z z z z"
+"a b c d"
+"e f g h"
+"i j k l"
+"m n o p"
+;
+
+
+}
+.all div{
+  
+    text-align: center;
+    color: black;
+    font-size: 50px;
+    height: 70px;
+    padding-top: 10px;
+    box-shadow: 0px 3px 0px 0px gray;
+}
+
+
+
+    </style>
+    <body>
+        <div class="all">
+
+         <div style="background-color: white; grid-area: z;margin-top: 15px;"></div>
+         <div style="background-color: white; grid-area: a;">1</div>
+         <div style="background-color: white; grid-area: b;">2</div>
+         <div style="background-color: white; grid-area: c;">3</div>
+         <div style="background-color: rgb(244, 244, 155); grid-area: d;">+</div>
+         <div style="background-color: white; grid-area: e;">4</div>
+         <div style="background-color: white; grid-area: f;">5</div>
+         <div style="background-color: white; grid-area: g;">6</div>
+         <div style="background-color: rgb(244, 244, 155); grid-area: h;">-</div>
+         <div style="background-color: white; grid-area: i;">7</div>
+         <div style="background-color: white; grid-area: j;">8</div>
+         <div style="background-color: white; grid-area: k;">9</div>
+         <div style="background-color: rgb(244, 244, 155); grid-area: l;">*</div>
+         <div style="background-color: palevioletred; grid-area: m;">c</div>
+         <div style="background-color: white; grid-area: n;">0</div>
+         <div style="background-color: white; grid-area: o;">=</div>
+         <div style="background-color: rgb(244, 244, 155); grid-area: p;">/</div>
+        
+        </div>
+    </body>
+    </html>
+</body>
+</html> -->
