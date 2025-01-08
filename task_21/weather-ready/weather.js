@@ -7,18 +7,16 @@ let apiurl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${q
 
           const date = new Date(data.dt *1000);
           const formattedDate = date.toLocaleDateString("en-US");
-          const day= date.toLocaleDateString();
           const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-          console.log(day);
           document.getElementById("date").textContent = formattedDate;
           document.getElementById("day").textContent = days[date.getDay()];
-
+         
           document.getElementById("city").innerHTML = data.name;
           document.getElementById("wind").innerHTML = data.wind.speed + " km/h";
           document.getElementById("PRESSURE").innerHTML = data.main.pressure + " hPa";
           document.getElementById("humidity").innerHTML = data.main.humidity + " %";
           document.getElementById("temp").innerHTML =Math.round(data.main.temp )+"°C";
-          document.getElementById("description").innerHTML = data.weather[0].description;
+          document.getElementById("description").innerHTML = data.weather[0].description
           
 
       }
