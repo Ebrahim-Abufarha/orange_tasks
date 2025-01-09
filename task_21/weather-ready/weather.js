@@ -36,7 +36,11 @@ let apiurl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${q
             q="london";
         }else if (selc.value =="Paris"){
             q="paris"
+        
+        }else if (selc.value =="tokyo"){
+            q="tokyo"
         }
+        
         checkWeather()
       }
     
