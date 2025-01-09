@@ -10,6 +10,11 @@ let apiurl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${q
           const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
           document.getElementById("date").textContent = formattedDate;
           document.getElementById("day").textContent = days[date.getDay()];
+          
+          const iconCode = data.weather[0].icon;
+          const img = document.getElementById("myimg");
+          const iconUrl = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
+            img.src = iconUrl;
          
           document.getElementById("city").innerHTML = data.name;
           document.getElementById("wind").innerHTML = data.wind.speed + " km/h";
@@ -37,12 +42,12 @@ let apiurl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${q
     
 
 
+ // Update the weather icon
 
 
 
 
-
-
+   
 
 
 
